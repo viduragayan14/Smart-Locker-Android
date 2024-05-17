@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".SelectBaysActivity">
+
+    <Button
+        android:id="@+id/btn_close_select_bays"
+        style="@style/close_btn_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_add_more_bays"
+        android:layout_width="923dp"
+        android:layout_height="173dp"
+        android:background="@drawable/select_bays_btn_shape_default"
+        android:text="@string/add_more_bays"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ll_temp_1"
+        app:layout_constraintStart_toStartOf="@+id/ll_temp_1"
+        app:layout_constraintTop_toBottomOf="@+id/ll_temp_1"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/btn_continue_select_bay"
+        style="@style/round_corner_btn_style"
+        android:text="@string/btn_text_continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_temp_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_select_bay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98">
+
+        <Button
+            android:id="@+id/btn_add_1_bay"
+            style="@style/select_bays_btn_style"
+            android:text="@string/_1" />
+
+        <Button
+            android:id="@+id/btn_add_2_bays"
+            style="@style/select_bays_btn_style"
+            android:text="@string/_2" />
+
+        <Button
+            android:id="@+id/btn_add_3_bays"
+            style="@style/select_bays_btn_style"
+            android:text="@string/_3" />
+
+        <Button
+            android:id="@+id/btn_add_4_bays"
+            style="@style/select_bays_btn_style"
+            android:text="@string/_4" />
+
+        <Button
+            android:id="@+id/btn_add_5_bays"
+            style="@style/select_bays_btn_style"
+            android:text="@string/_5" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/select_bays_title"
+        android:textColor="@color/black"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_select_bay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

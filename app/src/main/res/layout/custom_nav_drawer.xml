@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutCustomNavDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/gray_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_bold"
+                    android:text="Settings"
+                    android:textColor="@color/black"
+                    android:textSize="32sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bay_management"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/beige2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_bay_management"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/bay_management" />
+
+                <TextView
+                    android:id="@+id/txt_bay_management"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Bay Management"
+                    android:textColor="@color/orange"
+                    android:textSize="26sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ECECEC" />
+
+            <LinearLayout
+                android:id="@+id/users"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_users"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/users" />
+
+                <TextView
+                    android:id="@+id/txt_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Users"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ECECEC" />
+
+            <LinearLayout
+                android:id="@+id/order_apps"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_order_apps"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/order_apps" />
+
+                <TextView
+                    android:id="@+id/txt_order_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Order Apps"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ECECEC" />
+
+            <LinearLayout
+                android:id="@+id/bay_alerts"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_bay_alerts"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/bay_alerts" />
+
+                <TextView
+                    android:id="@+id/txt_bay_alerts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Bay Alerts"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ECECEC" />
+
+            <LinearLayout
+                android:id="@+id/system"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_system"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/system" />
+
+                <TextView
+                    android:id="@+id/txt_system"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="System"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ECECEC" />
+
+            <LinearLayout
+                android:id="@+id/back_loading"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_back_loading"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/backloading" />
+
+                <TextView
+                    android:id="@+id/txt_back_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Backloading"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ECECEC" />
+
+            <LinearLayout
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_history"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/history" />
+
+                <TextView
+                    android:id="@+id/txt_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="History"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#ECECEC" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/figtree_medium"
+                android:text="Exit To Home"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

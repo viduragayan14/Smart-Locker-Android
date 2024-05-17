@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".LoadOrderActivity">
+
+    <Button
+        android:id="@+id/btn_close_load_order"
+        style="@style/close_btn_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_add_more_bays_load_order"
+        android:layout_width="640dp"
+        android:layout_height="230dp"
+        android:background="@drawable/add_more_bays_btn_shape_load_order"
+        android:text="@string/add_more_bays_load_order"
+        android:textAllCaps="false"
+        android:textSize="65sp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_load_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_load_order_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_load_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_done_load_order"
+            style="@style/round_corner_btn_style"
+            android:background="@drawable/pill_shaped_blue_btn"
+            android:text="@string/done" />
+
+        <Button
+            android:id="@+id/btn_cancel_load_order"
+            style="@style/round_corner_btn_style"
+            android:background="@drawable/pill_shaped_beige_btn"
+            android:text="@string/cancel"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_load_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/tv_load_order_title"
+        android:textColor="@color/black"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

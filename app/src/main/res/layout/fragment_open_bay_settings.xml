@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="20dp"
+        tools:context=".fragments.OpenBaySettingsFragment">
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_late_pickup_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/figtree_bold"
+                android:text="Bay Not Closed"
+                android:textColor="@color/black"
+                android:textSize="34sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_enable_late_pickup_fragment1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:text="Activate"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_enable_late_pickup_fragment1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:checked="true"
+                    android:thumb="@drawable/thumb_selector"
+                    app:track="@drawable/track_selector" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_timeout1_open_bay_settings"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="@string/timeout_1"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+                <EditText
+                    android:id="@+id/et_timeout_1_open_bay_settings"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/white_curved_bg_border"
+                    android:enabled="false"
+                    android:fontFamily="@font/figtree_medium"
+                    android:gravity="center"
+                    android:hint="2 Min"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="26sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/btn_timeout1_open_bay_settings"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/pill_shaped_orange_btn">
+
+                    <ImageView
+                        android:id="@+id/text_save"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/clock1" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_timeout1_led_color_open_bay_settings"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="@string/color"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_timeout1_led_color_open_bay_settings"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/white_curved_bg_border"
+                    android:fontFamily="@font/figtree_medium"
+                    android:paddingHorizontal="20dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tv_beep_timeout1_open_bay_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:text="@string/beep"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_beep_timeout1_open_bay_settings"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:checked="true"
+                    android:thumb="@drawable/thumb_selector"
+                    app:track="@drawable/track_selector" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/gray_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_enable_late_pickup_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:text="Activate"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_enable_late_pickup_fragment"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:checked="true"
+                    android:thumb="@drawable/thumb_selector"
+                    app:track="@drawable/track_selector" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_timeout2_open_bay_settings"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="@string/timeout_2"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/et_timeout_2_open_bay_settings"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/white_curved_bg_border"
+                    android:enabled="false"
+                    android:fontFamily="@font/figtree_medium"
+                    android:gravity="center"
+                    android:hint="2 Min"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="26sp" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_timeout2_open_bay_settings"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/pill_shaped_orange_btn">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/clock1" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_timeout2_led_color_open_bay_settings"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="@string/color"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_timeout2_led_color_open_bay_settings"
+                    android:layout_width="400dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/white_curved_bg_border"
+                    android:fontFamily="@font/figtree_medium"
+                    android:paddingHorizontal="20dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/tv_beep_timeout2_open_bay_settings"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:text="@string/beep"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_beep_timeout2_open_bay_settings"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:checked="true"
+                    android:thumb="@drawable/thumb_selector"
+                    app:track="@drawable/track_selector" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/gray_bg" />
+
+            <Button
+                android:id="@+id/btn_save_open_bay_fragment"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_shaped_orange_btn"
+                android:paddingVertical="15dp"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3_Open_bay_settings"
+                app:layout_constraintTop_toBottomOf="@+id/switch_beep_timeout2_open_bay_settings" />
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>

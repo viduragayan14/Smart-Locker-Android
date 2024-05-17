@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:id="@+id/root_view"
+    tools:context=".CourierSettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/back_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imgVw_home_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/figtree_bold"
+            android:text="Add New App"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_delete_courier_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="@font/figtree_semibold"
+            android:text="DELETE APP"
+            android:textColor="@color/red"
+            android:textSize="26sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/root_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_keyboard_father"
+        android:layout_below="@+id/relative">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_username_add_user_fragment"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="App Name"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/et_courier_name__courier_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_text_settings_shape"
+                    android:fontFamily="@font/figtree_medium"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_courier_logo_courier_settings"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="App Logo"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_logo_section_courier_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView_logo_courier_settings"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:contentDescription="@string/logo_description"
+                        android:src="@drawable/sample_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="25dp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/btn_select_logo_courier_settings"
+                            android:layout_width="310dp"
+                            android:layout_height="65dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/gray_curved_bg_border">
+
+                            <TextView
+                                android:id="@+id/text_upload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/figtree_semibold"
+                                android:text="UPLOAD IMAGE"
+                                android:textColor="@color/black"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_logo_desc_courier_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/figtree_regular"
+                            android:text="@string/logo_description"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="@+id/guideline1_courier_settings"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_courier_logo_courier_settings" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/alphanumeric_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="@string/alphanumeric_order_number"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_keyboard_type_courier_settings"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:checked="true"
+                    android:thumb="@drawable/thumb_selector"
+                    app:track="@drawable/track_selector" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Heading"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/et_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_text_settings_shape"
+                    android:fontFamily="@font/figtree_medium"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:text="Enter your order no #"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_add_courier_settings"
+                style="@style/round_orange_btn_style_new"
+                android:layout_width="280dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/pill_shaped_orange_btn">
+
+                <TextView
+                    android:id="@+id/text_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:text="SAVE"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard_father"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#181818"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/kv_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#181818"
+            android:keyBackground="@drawable/white_curved_bg"
+            android:keyTextColor="#000000"
+            android:keyTextSize="26sp"
+            android:shadowRadius="0.0" />
+    </LinearLayout>
+
+
+</RelativeLayout>

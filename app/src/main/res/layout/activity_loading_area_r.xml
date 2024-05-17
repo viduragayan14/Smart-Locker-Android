@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    tools:context=".ScanOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="105dp"
+            android:layout_height="85dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/back_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/imgVw_home_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/figtree_bold"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/heart_beat_status"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/relative"
+        android:background="@color/green"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/heart_beat_status">
+
+        <ImageView
+            android:id="@+id/tv_courier_title"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/login_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_courier_title">
+
+            <TextView
+                android:id="@+id/tv_card_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/figtree_regular"
+                android:text="Enter the PIN to view Loading"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/et_password_loading_are"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_password_shape_new"
+                android:ems="10"
+                android:maxLines="1"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/figtree_regular"
+                android:gravity="center"
+                android:hint="PIN"
+                android:inputType="textPassword"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard_father"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/keyboard_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/kv_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#292E33"
+            android:keyBackground="@drawable/key_curved_bg"
+            android:keyTextColor="#000000"
+            android:keyTextSize="26sp"
+            android:shadowRadius="0.0" />
+    </LinearLayout>
+
+
+</RelativeLayout>

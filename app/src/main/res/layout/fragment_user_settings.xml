@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_view"
+    android:background="@color/gray_bg"
+    tools:context=".UserSettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_close_order_management"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/back_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imgVw_home_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/figtree_bold"
+            android:text="Add New User"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_delete_add_user_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="@font/figtree_semibold"
+            android:text="DELETE USER"
+            android:textColor="@color/red"
+            android:textSize="26sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/root_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_user_status_add_user_fragment"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Enable"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_user_status_add_user_fragment"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:checked="true"
+                    android:layout_gravity="center"
+                    android:thumb="@drawable/thumb_selector"
+                    app:track="@drawable/track_selector" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_username_add_user_fragment"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="User Name"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/et_username_add_user_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_text_settings_shape"
+                    android:fontFamily="@font/figtree_medium"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_user_role_add_user_fragment"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="User Role"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/spinner_user_role_add_user_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/edit_text_settings_shape"
+                        android:fontFamily="@font/figtree_medium"
+                        android:paddingHorizontal="20dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="26sp" />
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/keyboard_arrow_down" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_user_password_add_user_fragment"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="PIN Code"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/et_user_password_add_user_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_text_settings_shape"
+                    android:fontFamily="@font/figtree_medium"
+                    android:hint="PIN"
+                    android:maxLength="6"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_user_barcode_add_user_fragment"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/figtree_medium"
+                    android:text="Bar Code"
+                    android:textColor="@color/black"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/et_user_barcode_add_user_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_text_settings_shape"
+                    android:fontFamily="@font/figtree_medium"
+                    android:hint="Code"
+                    android:inputType="text"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="26sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_add_add_user_fragment"
+                style="@style/round_orange_btn_style_new"
+                android:layout_width="280dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/pill_shaped_orange_btn">
+
+                <TextView
+                    android:id="@+id/text_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:text="SAVE"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_keyboard_father"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="#181818"-->
+<!--        android:visibility="gone"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical"-->
+<!--        android:paddingTop="20dp"-->
+<!--        android:paddingBottom="20dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--        <android.inputmethodservice.KeyboardView-->
+<!--            android:id="@+id/kv_keyboard"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#181818"-->
+<!--            android:keyBackground="@drawable/white_curved_bg"-->
+<!--            android:keyTextColor="#000000"-->
+<!--            android:keyTextSize="26sp"-->
+<!--            android:shadowRadius="0.0" />-->
+<!--    </LinearLayout>-->
+
+
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".SettingsActivity">
+
+    <Button
+        android:id="@+id/btn_close_settings"
+        style="@style/close_btn_style"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_loading"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_close_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_close_settings" />
+
+    <EditText
+        android:id="@+id/et_welcome_text_settings"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="40dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_settings_title" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:text="Welcome Text"
+        app:layout_constraintBottom_toTopOf="@+id/et_welcome_text_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_welcome_text_settings">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Courier Options" />
+
+        <Switch
+            android:id="@+id/switch_uberEats"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Uber Eats"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switch_grubhub"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Grubhub"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switch_doordash"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Doordash"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switch_postmates"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Postmates"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switch_callInOrder"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Call In Order"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switch_onlineOrder"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Online Order"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save_settings"
+        style="@style/round_corner_btn_style"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
+        android:text="Save"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset_bays_settings"
+        style="@style/round_corner_btn_style"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
+        android:text="Reset Bays"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset_service_bay_settings"
+        style="@style/round_corner_btn_style"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
+        android:text="Open Service Bay"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_save_settings"
+        app:layout_constraintStart_toEndOf="@+id/btn_reset_bays_settings" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user_settings"
+            android:title="@string/menu_users" />
+        <item
+            android:id="@+id/nav_bay_settings"
+            android:title="@string/bay_settings" />
+        <item
+            android:id="@+id/nav_bay_calibration"
+            android:title="@string/bay_calibration" />
+        <item
+            android:id="@+id/nav_courier_settings"
+            android:title="@string/menu_loading" />
+    </group>
+    <group android:id="@+id/settings_notification">
+        <item android:title="@string/menu_notifications">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_late_pickup_settings"
+                        android:title="@string/late_pickup_timer" />
+                    <item
+                        android:id="@+id/nav_bay_color_settings"
+                        android:title="@string/bay_color_settings" />
+                    <item
+                        android:id="@+id/nav_open_bay_settings"
+                        android:title="@string/open_bay_settings" />
+                </group>
+            </menu>
+        </item>
+    </group>
+    <group android:id="@+id/settings_system">
+        <item android:title="@string/menu_system">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_home_screen_settings"
+                        android:title="@string/home_screen_settings" />
+                    <item
+                        android:id="@+id/nav_time_date_settings"
+                        android:title="@string/time_and_date" />
+                </group>
+            </menu>
+        </item>
+    </group>
+    <group android:id="@+id/group3">
+        <item
+            android:id="@+id/nav_back_loading"
+            android:title="@string/menu_back_loading" />
+    </group>
+</menu>

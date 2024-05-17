@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_bay_settings"
+        android:icon="@drawable/bay_management"
+        android:title="Bay Management" />
+
+    <item
+        android:id="@+id/nav_user_settings"
+        android:icon="@drawable/users"
+        android:title="Users" />
+
+    <item
+        android:id="@+id/nav_courier_settings"
+        android:icon="@drawable/order_apps"
+        android:title="Order Apps" />
+
+    <item
+        android:id="@+id/nav_bay_alerts"
+        android:icon="@drawable/bay_alerts"
+        android:title="Bay Alerts" />
+
+    <item
+        android:id="@+id/nav_system"
+        android:icon="@drawable/system"
+        android:title="System" />
+
+    <item
+        android:id="@+id/nav_back_loading"
+        android:icon="@drawable/backloading"
+        android:title="Backloading" />
+
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/history"
+        android:title="History" />
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="Exit To Home" />
+
+</menu>

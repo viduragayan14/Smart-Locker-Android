@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".AddMoreBaysActivity">
+
+    <Button
+        android:id="@+id/btn_close_add_more_bays"
+        style="@style/close_btn_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_add_more_bays_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ll_add_more_bays_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_more_bays_title">
+
+        <!--        todo: use image button-->
+        <Button
+            android:id="@+id/btn_reduce_bays"
+            style="@style/add_more_bays_btn_style"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/tv_selected_bays_add_more_bays"
+            style="@style/selected_bays_tv_style"
+            android:text="@string/_5" />
+
+        <Button
+            android:id="@+id/btn_add_bays"
+            style="@style/add_more_bays_btn_style"
+            android:text="@string/plus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_add_more_bays_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_open_add_more_bays"
+            style="@style/round_corner_btn_style"
+            android:text="@string/open" />
+
+        <Button
+            android:id="@+id/btn_back_add_more_bay"
+            style="@style/round_corner_btn_style"
+            android:background="@drawable/pill_shaped_beige_btn"
+            android:text="@string/back"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_add_more_bays_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="ADD MORE BAYS"
+        android:textColor="@color/black"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

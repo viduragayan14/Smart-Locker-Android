@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="3dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/drag"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/drag_indicator" />
+
+
+    <ImageView
+        android:id="@+id/imageView_courier_list_item"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/drag"
+        android:src="@drawable/default_courier_logo" />
+
+    <TextView
+        android:id="@+id/tv_name_courier_list_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/imageView_courier_list_item"
+        android:fontFamily="@font/figtree_semibold"
+        android:gravity="center"
+        android:text="@string/test_name"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:id="@+id/btn_edit_courier_list_item"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/switch_status_courier_list_item"
+        android:contentDescription="@string/edit_courier"
+        android:src="@drawable/edit" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_status_courier_list_item"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:checked="true"
+        android:thumb="@drawable/thumb_selector"
+        app:track="@drawable/track_selector" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#D1D1D1" />
+
+</RelativeLayout>

@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    tools:context=".fragments.LatePickupSettingsFragment">
+
+    <RelativeLayout
+        android:id="@+id/view_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title_load_pickup_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Load-In Order Time Out - Default 60sec"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/tv_personalize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="100dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/figtree_semibold"
+                                    android:text="Personalize"
+                                    android:textColor="@color/black"
+                                    android:textSize="26sp" />
+
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switch_personalize"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:checked="true"
+                                    android:thumb="@drawable/thumb_selector"
+                                    app:track="@drawable/track_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="100dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/figtree_semibold"
+                                    android:text="Enable notifications"
+                                    android:textColor="@color/black"
+                                    android:textSize="26sp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:checked="true"
+                                    android:thumb="@drawable/thumb_selector"
+                                    app:track="@drawable/track_selector" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_timeout_load_in"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="Timer"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <EditText
+                                android:id="@+id/et_timeout_load_in"
+                                android:layout_width="400dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:enabled="false"
+                                android:fontFamily="@font/figtree_medium"
+                                android:gravity="center"
+                                android:hint="02 min"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/btn_timeout_load_in"
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/pill_shaped_orange_btn">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/clock1" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title_late_pickup_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Late Pickup"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/tv_prevent_late_pickup_fragment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="100dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/figtree_semibold"
+                                    android:text="Prevent Late Orders Pickup"
+                                    android:textColor="@color/black"
+                                    android:textSize="26sp" />
+
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switch_prevent_late_pickup_fragment"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:checked="true"
+                                    android:thumb="@drawable/thumb_selector"
+                                    app:track="@drawable/track_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tv_enable_late_pickup_fragment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="100dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/figtree_semibold"
+                                    android:text="Enable notifications"
+                                    android:textColor="@color/black"
+                                    android:textSize="26sp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switch_enable_notification_fragment"
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:checked="true"
+                                    android:thumb="@drawable/thumb_selector"
+                                    app:track="@drawable/track_selector" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_timeout_late_pickup_fragment"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="Timeout"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <EditText
+                                android:id="@+id/et_timeout_late_pickup_fragment"
+                                android:layout_width="400dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:enabled="false"
+                                android:fontFamily="@font/figtree_medium"
+                                android:gravity="center"
+                                android:hint="00 Hr 30 Min"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/btn_timeout_late_pickup_fragment"
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/pill_shaped_orange_btn">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/clock1" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_led_color_late_pickup_fragment"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="LEDs Color"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <Spinner
+                                    android:id="@+id/spinner_led_color_late_pickup_fragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/white_curved_bg_border"
+                                    android:fontFamily="@font/figtree_medium"
+                                    android:paddingHorizontal="20dp"
+                                    android:spinnerMode="dropdown"
+                                    android:textSize="26sp" />
+
+                                <ImageView
+                                    android:layout_width="34dp"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="20dp"
+                                    android:src="@drawable/keyboard_arrow_down" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_late_warning_late_pickup_fragment"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="Late Warning"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <EditText
+                                android:id="@+id/et_late_warning_late_pickup_fragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:fontFamily="@font/figtree_medium"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/btn_save_late_pickup_timer_fragment"
+                            android:layout_width="210dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/pill_shaped_orange_btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="SAVE"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title_late_pickup_timer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Bay Not Closed"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_activate_bay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/figtree_semibold"
+                                android:text="Activate"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_activate_bay"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:checked="true"
+                                android:thumb="@drawable/thumb_selector"
+                                app:track="@drawable/track_selector" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_timeout1_open_bay_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="@string/timeout_1"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <EditText
+                                android:id="@+id/et_timeout_1_open_bay_settings"
+                                android:layout_width="400dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:enabled="false"
+                                android:fontFamily="@font/figtree_medium"
+                                android:gravity="center"
+                                android:hint="2 Min"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/btn_timeout1_open_bay_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/pill_shaped_orange_btn">
+
+                                <ImageView
+                                    android:id="@+id/text_save"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/clock1" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_timeout1_led_color_open_bay_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="@string/color"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content">
+
+                                <Spinner
+                                    android:id="@+id/spinner_timeout1_led_color_open_bay_settings"
+                                    android:layout_width="400dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/white_curved_bg_border"
+                                    android:fontFamily="@font/figtree_medium"
+                                    android:paddingHorizontal="20dp"
+                                    android:spinnerMode="dropdown"
+                                    android:textSize="26sp" />
+
+                                <ImageView
+                                    android:layout_width="34dp"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="20dp"
+                                    android:src="@drawable/keyboard_arrow_down" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_beep_timeout1_open_bay_settings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/figtree_semibold"
+                                android:text="@string/beep"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_beep_timeout1_open_bay_settings"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:checked="true"
+                                android:thumb="@drawable/thumb_selector"
+                                app:track="@drawable/track_selector" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginVertical="20dp"
+                            android:background="@color/gray_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_activate_bay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/figtree_semibold"
+                                android:text="Activate"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_activate_bay2"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:checked="true"
+                                android:thumb="@drawable/thumb_selector"
+                                app:track="@drawable/track_selector" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_timeout2_open_bay_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="@string/timeout_2"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <EditText
+                                android:id="@+id/et_timeout_2_open_bay_settings"
+                                android:layout_width="400dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:enabled="false"
+                                android:fontFamily="@font/figtree_medium"
+                                android:gravity="center"
+                                android:hint="2 Min"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/btn_timeout2_open_bay_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/pill_shaped_orange_btn">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/clock1" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_timeout2_led_color_open_bay_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="@string/color"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:layout_width="400dp"
+                                android:layout_height="wrap_content">
+
+                                <Spinner
+                                    android:id="@+id/spinner_timeout2_led_color_open_bay_settings"
+                                    android:layout_width="400dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/white_curved_bg_border"
+                                    android:fontFamily="@font/figtree_medium"
+                                    android:paddingHorizontal="20dp"
+                                    android:spinnerMode="dropdown"
+                                    android:textSize="26sp" />
+
+                                <ImageView
+                                    android:layout_width="34dp"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="20dp"
+                                    android:src="@drawable/keyboard_arrow_down" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_beep_timeout2_open_bay_settings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_marginBottom="10dp"
+
+                                android:fontFamily="@font/figtree_semibold"
+                                android:text="@string/beep"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_beep_timeout2_open_bay_settings"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:checked="true"
+                                android:thumb="@drawable/thumb_selector"
+                                app:track="@drawable/track_selector" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginVertical="20dp"
+                            android:background="@color/gray_bg" />
+
+                        <RelativeLayout
+                            android:id="@+id/btn_save_open_bay_fragment"
+                            android:layout_width="210dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/pill_shaped_orange_btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="SAVE"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title_bay_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Bay Status"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_when_empty_bay_color_settings"
+                                android:layout_width="220dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="When Empty"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <Spinner
+                                    android:id="@+id/spinner_when_empty_bay_color_settings"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/white_curved_bg_border"
+                                    android:fontFamily="@font/figtree_medium"
+                                    android:paddingHorizontal="20dp"
+                                    android:spinnerMode="dropdown"
+                                    android:textSize="26sp" />
+
+                                <ImageView
+                                    android:layout_width="34dp"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="20dp"
+                                    android:src="@drawable/keyboard_arrow_down" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_when_full_bay_color_settings"
+                                android:layout_width="220dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="When Full"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <Spinner
+                                    android:id="@+id/spinner_when_full_bay_color_settings"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/white_curved_bg_border"
+                                    android:fontFamily="@font/figtree_medium"
+                                    android:paddingHorizontal="20dp"
+                                    android:spinnerMode="dropdown"
+                                    android:textSize="26sp" />
+
+                                <ImageView
+                                    android:layout_width="34dp"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="20dp"
+                                    android:src="@drawable/keyboard_arrow_down" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_when_reloading_bay_color_settings"
+                                android:layout_width="220dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="When Reloading"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <Spinner
+                                    android:id="@+id/spinner_when_reloading_bay_color_settings"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/white_curved_bg_border"
+                                    android:fontFamily="@font/figtree_medium"
+                                    android:paddingHorizontal="20dp"
+                                    android:spinnerMode="dropdown"
+                                    android:textSize="26sp" />
+
+                                <ImageView
+                                    android:layout_width="34dp"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="20dp"
+                                    android:src="@drawable/keyboard_arrow_down" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_save_bay_color_fragment"
+                            android:layout_width="210dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/pill_shaped_orange_btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="SAVE"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard_father"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#181818"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/kv_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#181818"
+                android:keyBackground="@drawable/white_curved_bg"
+                android:keyTextColor="#000000"
+                android:keyTextSize="26sp"
+                android:shadowRadius="0.0" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

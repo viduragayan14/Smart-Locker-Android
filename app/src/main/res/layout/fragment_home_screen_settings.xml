@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    tools:context=".fragments.HomeScreenSettingsFragment">
+
+    <RelativeLayout
+        android:id="@+id/view_root"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_keyboard_father"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Time and Date"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_enable_time_and_date_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="Auto"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/switch_enable_time_and_date_settings"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:checked="true"
+                                android:layout_marginBottom="10dp"
+                                android:thumb="@drawable/thumb_selector"
+                                app:track="@drawable/track_selector" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_manual_time_and_date_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="Manual"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <EditText
+                                android:id="@+id/et_manual_time_and_date_settings"
+                                android:layout_width="400dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:enabled="false"
+                                android:fontFamily="@font/figtree_medium"
+                                android:gravity="center"
+                                android:hint="Using system time"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/btn_set_manual_time_and_date_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="30dp"
+                                android:background="@drawable/pill_shaped_orange_btn">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/clock1" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_save_time_and_date_fragment"
+                            android:layout_width="210dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/pill_shaped_orange_btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="SAVE"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title_late_pickup_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Home Screen Logo"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp">
+
+                            <TextView
+                                android:id="@+id/tv_courier_logo_courier_settings"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="App Logo"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_logo_section_courier_settings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView_logo_home_screen_settings"
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:contentDescription="@string/logo_description"
+                                    android:src="@drawable/sample_image" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="25dp"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/btn_select_logo_home_screen_settings"
+                                        android:layout_width="310dp"
+                                        android:layout_height="65dp"
+                                        android:layout_marginEnd="30dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="@drawable/white_curved_bg_border">
+
+                                        <TextView
+                                            android:id="@+id/text_upload"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:fontFamily="@font/figtree_semibold"
+                                            android:text="UPLOAD IMAGE"
+                                            android:textColor="@color/black"
+                                            android:textSize="26sp"
+                                            android:textStyle="bold" />
+
+
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:id="@+id/tv_logo_desc_courier_settings"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/figtree_regular"
+                                        android:text="@string/logo_description"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline1_courier_settings"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_courier_logo_courier_settings" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_save_home_logo_settings_fragment"
+                            android:layout_width="210dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/pill_shaped_orange_btn"
+                            android:visibility="invisible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="SAVE"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Welcome Screen Settings"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/tv_welcome_title_home_screen_settings"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="@string/welcome_title"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                            <EditText
+                                android:id="@+id/et_welcome_title_home_screen_settings"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:fontFamily="@font/figtree_medium"
+                                android:gravity="center"
+                                android:hint="Title"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_welcome_msg_home_screen_settings"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="@string/welcome_message"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                            <EditText
+                                android:id="@+id/et_welcome_msg_home_screen_settings"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/white_curved_bg_border"
+                                android:fontFamily="@font/figtree_medium"
+                                android:gravity="center"
+                                android:hint="Message"
+                                android:inputType="text"
+                                android:paddingHorizontal="20dp"
+                                android:textSize="26sp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btn_save_home_screen_settings_fragment"
+                            android:layout_width="210dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/pill_shaped_orange_btn"
+                            android:visibility="invisible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="SAVE"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Software"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/version"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/figtree_medium"
+                                android:text="1.0.5"
+                                android:textColor="@color/black"
+                                android:textSize="26sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/figtree_bold"
+                            android:text="Android"
+                            android:textColor="@color/black"
+                            android:textSize="34sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/figtree_medium"
+                                    android:text="Click to exit the App and go to the Android system"
+                                    android:textColor="@color/black"
+                                    android:textSize="26sp" />
+
+                                <RelativeLayout
+                                    android:id="@+id/exit"
+                                    android:layout_width="210dp"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@drawable/pill_shaped_orange_btn">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/figtree_medium"
+                                        android:text="EXIT"
+                                        android:textColor="@color/black"
+                                        android:textSize="26sp" />
+
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_keyboard_father"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#181818"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/kv_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#181818"
+                android:keyBackground="@drawable/white_curved_bg"
+                android:keyTextColor="#000000"
+                android:keyTextSize="26sp"
+                android:shadowRadius="0.0" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
